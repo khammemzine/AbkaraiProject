@@ -3,12 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>تسجيل الدخول</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    form {
+      display: inline-block;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 250px;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 30px;
+      font-size: 18px;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f73;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <h2>تسجيل الدخول للمشتركين</h2>
   <form method="POST" action="/login">
-    <input type="text" name="username" placeholder="مثال: user2025" value="user2025" required><br><br>
-    <input type="password" name="password" placeholder="مثال: pass9876" value="pass9876" required><br><br>
+    <input type="text" name="username" placeholder="مثال: user2025" value="user2025" required><br>
+    <input type="password" name="password" placeholder="مثال: pass9876" value="pass9876" required><br>
     <button type="submit">دخول</button>
   </form>
 </body>
