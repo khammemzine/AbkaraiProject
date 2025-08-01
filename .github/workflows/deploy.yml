@@ -5,14 +5,17 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write   # ضروري لكي يتمكن من إنشاء أو تحديث فرع gh-pages
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🔄 Checkout code
+      - name: 🔄 Checkout source
         uses: actions/checkout@v3
 
-      - name: 🚚 Copy frontend to root
+      - name: 📁 Prepare static site
         run: |
           mkdir out
           cp -r frontend/* out/
