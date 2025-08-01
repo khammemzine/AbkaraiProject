@@ -20,7 +20,7 @@ app.get("/login", (req, res) => {
 
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-  if (username === "admin" && password === "1234") {
+  if (username === "user2025" && password === "pass9876") {
     req.session.authenticated = true;
     res.redirect("/members");
   } else {
@@ -47,3 +47,4 @@ app.get("/download", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
